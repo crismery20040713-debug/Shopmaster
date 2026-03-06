@@ -1,0 +1,59 @@
+/* Variables y Configuración General */
+:root {
+    --primary: #007BFF;
+    --secondary: #28A745;
+    --dark: #343A40;
+    --bg-light: #F8F9FA;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--dark);
+}
+
+/* Tarjetas de Producto */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-img-container {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Corta el texto a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Animaciones suaves */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: scale(0.9);
+}
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
